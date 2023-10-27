@@ -1,3 +1,4 @@
+import random
 #main code sudoku resolver
 #insert your sudoku in order of lines and use "0" in the blank spaces
 
@@ -8,29 +9,17 @@ def create_matriz():
     for i in range(9):
         linha = []
         for j in range(9):
-            value = input("digite em ordem de linha: ")
+            #value = input("digite em ordem de linha: ")
+            value = random.randint(1,9)
             linha.append(value)
-            linha[j]
-        print(f"{linha}\n")            
-        matriz += linha
+        #print(f"{linha}\n")            
+        matriz.append(linha)
     return matriz
 
 
 '''
-line1 = input("line 1:")
-line2 = input("line 2:")
-line3 = input("line 3:")
-line4 = input("line 4:")
-line5 = input("line 5:")
-line6 = input("line 6:")
-line7 = input("line 7:")
-line8 = input("line 8:")
-line9 = input("line 9:")
-'''
-
-'''
 resolvido:
-193567128
+493567182
 812439657
 657218439
 326951874
@@ -41,7 +30,7 @@ resolvido:
 784193526
 '''
 
-matriz =([4,0,3,5,0,7,0,8,0],
+matriztest =([4,0,3,5,0,7,0,8,0],
          [0,0,2,0,0,9,0,0,7],
          [0,5,0,0,1,8,0,0,9],
          [3,0,0,0,5,0,0,0,4],
